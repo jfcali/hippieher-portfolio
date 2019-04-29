@@ -4,4 +4,4 @@ const series = () => {
   return <div>text link image</div>
 }
 
-return series
+export default series
