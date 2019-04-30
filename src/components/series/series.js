@@ -1,19 +1,21 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import styles from './Series.module.css'
 
 import SeriesSection from './SeriesSection/SeriesSection'
 import SeriesTitle from './SeriesTitle/SeriesTitle'
 import SeriesImage from './SeriesImage/SeriesImage'
 
-const series = () => {
+const series = props => {
+  console.log(props)
   return (
     <>
       <SeriesSection>
         <SeriesTitle title="TEXT LINK" />
-        <SeriesImage />
+        <SeriesImage src={props.images.data.imageOne.childImageSharp.fluid} />
       </SeriesSection>
       <SeriesSection>
-        <SeriesImage />
+        <SeriesImage src={props.images.data.imageOne.childImageSharp.fluid} />
         <SeriesTitle title="TEXT LINK 2" />
       </SeriesSection>
     </>
