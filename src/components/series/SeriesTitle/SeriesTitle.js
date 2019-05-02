@@ -3,11 +3,13 @@ import { Link } from 'gatsby'
 
 import styles from './SeriesTitle.module.css'
 
-const seriesTitle = ({ title, address = '/' }) => {
+const seriesTitle = ({ title, address = '/', backgroundColor = "#c5b794" }) => {
   return (
-    <div className={styles.SeriesTitle}>
-      <Link to={address}>{title}</Link>
-    </div>
+    <Link className={styles.SeriesTitle} to={address} style={{backgroundColor}}>
+      <div>
+        {title}
+      </div>
+    </Link>
   )
 }
 
