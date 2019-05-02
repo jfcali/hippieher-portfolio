@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
+// import Image from '../components/image'
 import SEO from '../components/seo'
-import Series from '../components/Series/Series'
+import Series from '../components/series/Series'
 
 const IndexPage = props => (
   <Layout>
@@ -16,9 +16,57 @@ const IndexPage = props => (
 
 export const pageQuery = graphql`
   query {
-    imageOne: file(relativePath: { eq: "la-martina.jpg" }) {
+    imageOne: file(relativePath: { eq: "product.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth: 2000) {
+          sizes
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          aspectRatio
+        }
+      }
+    }
+    imageTwo: file(relativePath: { eq: "oldness.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          sizes
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          aspectRatio
+        }
+      }
+    }
+    imageThree: file(relativePath: { eq: "la-martina.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          sizes
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          aspectRatio
+        }
+      }
+    }
+    imageFour: file(relativePath: { eq: "diary.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          sizes
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          aspectRatio
+        }
+      }
+    }
+    imageFive: file(relativePath: { eq: "portrait.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
           sizes
           src
           srcSet
