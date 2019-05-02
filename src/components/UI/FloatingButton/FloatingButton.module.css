@@ -1,6 +1,9 @@
 .Link {
   position: fixed;
-  padding: 10px;
+  padding: 1em;
+  z-index: 10000;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .TopLeft {
