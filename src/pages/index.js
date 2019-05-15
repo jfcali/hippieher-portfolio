@@ -19,60 +19,35 @@ export const pageQuery = graphql`
     imageOne: file(relativePath: { eq: "product.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
-          sizes
-          src
-          srcSet
-          srcWebp
-          srcSetWebp
-          aspectRatio
+          ...GatsbyImageSharpFluid
         }
       }
     }
     imageTwo: file(relativePath: { eq: "oldness.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
-          sizes
-          src
-          srcSet
-          srcWebp
-          srcSetWebp
-          aspectRatio
+          ...GatsbyImageSharpFluid
         }
       }
     }
     imageThree: file(relativePath: { eq: "la-martina.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
-          sizes
-          src
-          srcSet
-          srcWebp
-          srcSetWebp
-          aspectRatio
+          ...GatsbyImageSharpFluid
         }
       }
     }
     imageFour: file(relativePath: { eq: "diary.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
-          sizes
-          src
-          srcSet
-          srcWebp
-          srcSetWebp
-          aspectRatio
+          ...GatsbyImageSharpFluid
         }
       }
     }
     imageFive: file(relativePath: { eq: "portrait.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
-          sizes
-          src
-          srcSet
-          srcWebp
-          srcSetWebp
-          aspectRatio
+          ...GatsbyImageSharpFluid
         }
       }
     }
