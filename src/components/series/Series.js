@@ -11,7 +11,7 @@ const series = props => {
   return (
     <>
       <SeriesSection>
-        <SeriesTitle title="PRODUCT" backgroundColor="#b06844"/>
+        <SeriesTitle title="PRODUCT" backgroundColor="#b06844" />
         <SeriesImage src={props.images.data.imageOne.childImageSharp.fluid} />
       </SeriesSection>
       <SeriesSection>
@@ -19,7 +19,7 @@ const series = props => {
         <SeriesTitle title="LA MARTINA" />
       </SeriesSection>
       <SeriesSection>
-        <SeriesTitle title="OLD PEOPLE" backgroundColor="#212520"/>
+        <SeriesTitle title="OLD PEOPLE" backgroundColor="#212520" />
         <SeriesImage src={props.images.data.imageTwo.childImageSharp.fluid} />
       </SeriesSection>
       <SeriesSection>
@@ -27,7 +27,7 @@ const series = props => {
         <SeriesTitle title="DIARY" backgroundColor="#395974" />
       </SeriesSection>
       <SeriesSection>
-        <SeriesTitle title="PORTRAIT" backgroundColor="#ba6243"/>
+        <SeriesTitle title="PORTRAIT" backgroundColor="#ba6243" />
         <SeriesImage src={props.images.data.imageFive.childImageSharp.fluid} />
       </SeriesSection>
     </>
