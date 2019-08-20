@@ -1,38 +1,28 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import ImageLayout from '../components/imageLayout/imageLayout'
 
 const portraitPage = props => {
   return (
-    <div>
-      {props.data.allFile.edges.map((n, i) => {
-        console.log(n)
-        return (
-          <Img
-            key={i}
-            fixed={n.node.childImageSharp.fixed}
-            style={{ backgroundColor: 'black' }}
-            onLoad={console.log('loaded ', n.node)}
-          />
-        )
-      })}
-    </div>
+    <Layout lightMode>
+      <SEO title="Portrait" keywords={[`gatsby`, `application`, `react`]} />
+      <ImageLayout images={props.data.portraits.edges} />
+    </Layout>
   )
 }
 
 export const pageQuery = graphql`
   {
-    allFile(
-      filter: {
-        extension: { regex: "(jpeg|jpg|gif|png)/" }
-        sourceInstanceName: { eq: "images" }
-      }
-    ) {
+    portraits: allFile(filter: { relativeDirectory: { eq: "portraits" } }) {
       edges {
         node {
+          name
+          relativePath
           childImageSharp {
-            fixed(width: 125, height: 300) {
-              ...GatsbyImageSharpFixed_noBase64
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

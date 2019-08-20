@@ -7,7 +7,6 @@ import SeriesTitle from './SeriesTitle/SeriesTitle'
 import SeriesImage from './SeriesImage/SeriesImage'
 
 const series = props => {
-  console.log(props)
   return (
     <>
       <SeriesSection>
@@ -27,7 +26,11 @@ const series = props => {
         <SeriesTitle title="DIARY" backgroundColor="#395974" />
       </SeriesSection>
       <SeriesSection>
-        <SeriesTitle title="PORTRAIT" backgroundColor="#ba6243" />
+        <SeriesTitle
+          title="PORTRAIT"
+          backgroundColor="#ba6243"
+          address="/portrait"
+        />
         <SeriesImage src={props.images.data.imageFive.childImageSharp.fluid} />
       </SeriesSection>
     </>

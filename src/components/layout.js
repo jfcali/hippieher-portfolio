@@ -13,7 +13,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import FloatingButton from '../components/UI/FloatingButton/FloatingButton'
 import './layout.css'
 
-const Layout = ({ children }) => (
+const Layout = props => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -26,9 +26,19 @@ const Layout = ({ children }) => (
     `}
     render={() => (
       <>
-        <FloatingButton title="HOME" address="/" position={1} />
-        <FloatingButton title="INFO" address="/info" position={2} />
-        <main>{children}</main>
+        <FloatingButton
+          title="HOME"
+          address="/"
+          position={1}
+          lightMode={props.lightMode}
+        />
+        <FloatingButton
+          title="INFO"
+          address="/info"
+          position={2}
+          lightMode={props.lightMode}
+        />
+        <main>{props.children}</main>
         <footer>© {new Date().getFullYear()} DIANA FERNANDA VÉLEZ</footer>
       </>
     )}

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styles from './FloatingButton.module.css'
 
-const floatingButton = ({ title, address, position = 1 }) => {
+const floatingButton = ({ title, address, position = 1, lightMode }) => {
   const where =
     position === 1
       ? 'TopLeft'
@@ -13,7 +13,13 @@ const floatingButton = ({ title, address, position = 1 }) => {
       : 'BottomLeft'
 
   return (
-    <Link to={address} className={[styles.Link, styles[where]].join(' ')}>
+    <Link
+      to={address}
+      className={[styles.Link, styles[where]].join(' ')}
+      style={{
+        color: lightMode ? 'black' : null,
+      }}
+    >
       {title}
     </Link>
   )

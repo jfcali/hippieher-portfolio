@@ -4,6 +4,8 @@
   z-index: 10000;
   font-size: 35px;
   font-weight: bold;
+  color: #f2dbba;
+  mix-blend-mode: overlay;
 }
 
 .TopLeft {

@@ -1,0 +1,68 @@
+.ImageLayout {
+  width: 100%;
+  position: relative;
+}
+
+.Image {
+  position: absolute;
+}
+
+.Image-0 {
+  min-width: 25%;
+  top: 3%;
+  left: 10%;
+}
+.Image-1 {
+  min-width: 19%;
+  top: 18%;
+  left: 60%;
+}
+.Image-2 {
+  min-width: 39%;
+  top: 33%;
+  left: 25%;
+}
+.Image-3 {
+  min-width: 29%;
+  top: 50%;
+  left: 55%;
+}
+.Image-4 {
+  min-width: 25%;
+  top: 67%;
+  left: 20%;
+}
+.Image-5 {
+  min-width: 23%;
+  top: 80%;
+  left: 60%;
+}
+
+.Thumbnail {
+  transition: all ease 0.35s;
+  opacity: 1;
+  transform: translateY(0px);
+  position: absolute !important;
+}
+
+@media (min-width: 1024px) {
+  .Thumbnail:hover {
+    transition: all ease 0.35s;
+    opacity: 0.7;
+    transform: translateY(8px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .Thumbnail {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    max-width: 80% !important;
+    min-width: 0% !important;
+    margin: 10%;
+  }
+  .ImageLayout {
+    height: auto !important;
+  }
+}
