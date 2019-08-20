@@ -1,0 +1,29 @@
+.Link {
+  position: fixed;
+  padding: 1em;
+  z-index: 10000;
+  font-size: 35px;
+  font-weight: bold;
+  color: #f2dbba;
+  mix-blend-mode: overlay;
+}
+
+.TopLeft {
+  left: 0;
+  top: 0;
+}
+
+.TopRight {
+  right: 0;
+  top: 0;
+}
+
+.BottomRight {
+  right: 0;
+  bottom: 0;
+}
+
+.BottomLeft {
+  left: 0;
+  bottom: 0;
+}

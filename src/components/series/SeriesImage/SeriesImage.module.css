@@ -1,0 +1,19 @@
+.SeriesImage {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Image {
+  height: 100%;
+  width: auto;
+  flex-grow: 1;
+}
+
+@media (max-width: 1024px) {
+  .SeriesImage {
+    width: 100%;
+  }
+}

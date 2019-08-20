@@ -1,21 +1,57 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from '../components/layout'
+// import Image from '../components/image'
+import SEO from '../components/seo'
+import Series from '../components/series/Series'
 
-const IndexPage = () => (
-  <div>
+const IndexPage = props => (
+  <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image name="gatsby-astronaut.png" />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
+    <Series images={props} />
+    {/* <Link to="/page-2/">Go to page 2</Link> */}
+  </Layout>
 )
+
+export const pageQuery = graphql`
+  query {
+    imageOne: file(relativePath: { eq: "product.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageTwo: file(relativePath: { eq: "oldness.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageThree: file(relativePath: { eq: "la-martina.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageFour: file(relativePath: { eq: "diary.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageFive: file(relativePath: { eq: "portrait.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 2000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
