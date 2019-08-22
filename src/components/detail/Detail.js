@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './Detail.module.css'
 import Img from 'gatsby-image'
 
@@ -10,7 +10,13 @@ const Detail = props => {
       onClick={() => props.hide()}
     >
       {props.image ? (
-        <Img fluid={props.image} style={{ minWidth: '1000px' }} />
+        <div style={{ width: '100%' }}>
+          <Img
+            fluid={{ ...props.image }}
+            style={{ margin: '1rem', maxHeight: 'calc(100vh - 4rem)' }}
+            imgStyle={{ objectFit: 'contain' }}
+          />
+        </div>
       ) : null}
     </div>
   )
