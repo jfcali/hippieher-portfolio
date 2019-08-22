@@ -3,7 +3,11 @@ import InfoLayout from '../components/info/InfoLayout'
 
 const infoPage = props => {
   console.log(props)
-  return <InfoLayout backTo={props.location.state.prevPath || '/'} />
+  return (
+    <InfoLayout
+      backTo={props.location.state ? props.location.state.prevPath || '/' : '/'}
+    />
+  )
 }
 
 export default infoPage
