@@ -23,7 +23,7 @@ const floatingButton = ({ title, address, position = 1, lightMode }) => {
       style={{
         color: lightMode ? 'black' : null,
       }}
-      state={{ prevPath }}
+      state={{ prevPath: prevPath }}
     >
       {title}
     </Link>
