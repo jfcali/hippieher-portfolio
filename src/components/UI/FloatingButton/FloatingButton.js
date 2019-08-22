@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'gatsby'
 import styles from './FloatingButton.module.css'
 
 const floatingButton = ({ title, address, position = 1, lightMode }) => {
+  const [prevPath, setPrevPath] = useState('/')
+  useEffect(() => {
+    setPrevPath(window.location.pathname)
+  }, [])
   const where =
     position === 1
       ? 'TopLeft'
@@ -19,8 +23,7 @@ const floatingButton = ({ title, address, position = 1, lightMode }) => {
       style={{
         color: lightMode ? 'black' : null,
       }}
-      onClick={() => console.log(window.location)}
-      state={{ prevPath: window.location.pathname }}
+      state={{ prevPath }}
     >
       {title}
     </Link>
