@@ -1,0 +1,70 @@
+.Info {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  padding: 10%;
+  padding-top: 5%;
+  transition: 0.33s all ease;
+}
+
+.Content {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.Visible {
+  pointer-events: all;
+  opacity: 1;
+  padding-top: 10%;
+  transition: 0.33s all ease;
+}
+
+.Back {
+  position: absolute;
+  color: black;
+  right: 20px;
+  top: 20px;
+}
+
+.Back:visited {
+  color: black;
+}
+
+.Container {
+  display: flex;
+}
+
+.Bio {
+  flex: 647 1 0%;
+  max-width: 647px;
+  padding-right: 40px;
+}
+.Bio p {
+  line-height: 1.7em;
+}
+.Contact {
+  padding-left: 40px;
+  flex: 333 1 0%;
+  margin-top: 76px;
+}
+.Contact h2 {
+  letter-spacing: 0.03em;
+  font-size: 17px;
+}
+.Contact ul {
+  list-style: none;
+  margin-left: 0px;
+  font-size: 15px;
+}
+.Contact ul li {
+  margin-bottom: 0px;
+}

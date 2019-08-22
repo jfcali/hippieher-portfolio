@@ -45,7 +45,7 @@
   position: absolute !important;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .Thumbnail:hover {
     transition: all ease 0.35s;
     opacity: 0.7;
@@ -53,7 +53,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .Thumbnail {
     position: relative !important;
     left: 0 !important;

@@ -19,6 +19,8 @@ const floatingButton = ({ title, address, position = 1, lightMode }) => {
       style={{
         color: lightMode ? 'black' : null,
       }}
+      onClick={() => console.log(window.location)}
+      state={{ prevPath: window.location.pathname }}
     >
       {title}
     </Link>
