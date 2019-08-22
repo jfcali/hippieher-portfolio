@@ -12,8 +12,9 @@
   flex-grow: 1;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
   .SeriesImage {
     width: 100%;
+    order: 1;
   }
 }
