@@ -16,11 +16,12 @@ const groupImages = (images, size = 6) => {
 const imageLayout = props => {
   const [showDetail, setShowDetail] = useState(false)
   const [currentImage, setCurrentImage] = useState()
-  const groupOfImages = groupImages([...props.images, ...props.images])
-  console.log(groupOfImages)
+  console.log(props.images)
+  const groupOfImages = groupImages(props.images)
   return (
     <div style={{ paddingBottom: '250px' }}>
       {groupOfImages.map((images, index) => {
+        console.log(images)
         return (
           <div
             className="ImageLayout"
@@ -31,13 +32,14 @@ const imageLayout = props => {
               const classes = ['Thumbnail', `Image-${i % 10}`]
               return (
                 <div
+                  key={n.node.name}
                   onClick={() => {
                     setShowDetail(true)
                     setCurrentImage(n.node.childImageSharp.fluid)
                   }}
                 >
                   <Img
-                    key={i}
+                    key={`_${i}_${index}`}
                     fluid={n.node.childImageSharp.fluid}
                     className={classes.join(' ')}
                     // onLoad={console.log('loaded ', n.node)}
