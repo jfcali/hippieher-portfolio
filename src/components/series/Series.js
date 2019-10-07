@@ -18,12 +18,16 @@ const series = props => {
         <SeriesImage src={props.images.data.imageOne.childImageSharp.fluid} />
       </SeriesSection>
       <SeriesSection>
-        <SeriesImage src={props.images.data.imageThree.childImageSharp.fluid} />
-        <SeriesTitle title="PORTRAIT" address="/portrait" />
+        <SeriesImage src={props.images.data.imageTwo.childImageSharp.fluid} />
+        <SeriesTitle
+          title="PORTRAIT"
+          address="/portrait"
+          backgroundColor="#432943"
+        />
       </SeriesSection>
       <SeriesSection>
         <SeriesTitle title="DIARY" backgroundColor="#212520" address="/diary" />
-        <SeriesImage src={props.images.data.imageTwo.childImageSharp.fluid} />
+        <SeriesImage src={props.images.data.imageThree.childImageSharp.fluid} />
       </SeriesSection>
       <SeriesSection>
         <SeriesImage src={props.images.data.imageFour.childImageSharp.fluid} />

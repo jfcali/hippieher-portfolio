@@ -16,35 +16,35 @@ const IndexPage = props => (
 
 export const pageQuery = graphql`
   query {
-    imageOne: file(relativePath: { eq: "product.jpg" }) {
+    imageOne: file(relativePath: { eq: "commissioned.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    imageTwo: file(relativePath: { eq: "oldness.jpg" }) {
+    imageTwo: file(relativePath: { eq: "portrait.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    imageThree: file(relativePath: { eq: "la-martina.jpg" }) {
+    imageThree: file(relativePath: { eq: "diary.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    imageFour: file(relativePath: { eq: "diary.jpg" }) {
+    imageFour: file(relativePath: { eq: "places.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    imageFive: file(relativePath: { eq: "portrait.jpg" }) {
+    imageFive: file(relativePath: { eq: "personal.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 2000) {
           ...GatsbyImageSharpFluid
