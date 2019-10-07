@@ -10,26 +10,34 @@ const series = props => {
   return (
     <>
       <SeriesSection>
-        <SeriesTitle title="PRODUCT" backgroundColor="#b06844" />
+        <SeriesTitle
+          title="COMMISSIONED"
+          backgroundColor="#b06844"
+          address="/commissioned"
+        />
         <SeriesImage src={props.images.data.imageOne.childImageSharp.fluid} />
       </SeriesSection>
       <SeriesSection>
         <SeriesImage src={props.images.data.imageThree.childImageSharp.fluid} />
-        <SeriesTitle title="LA MARTINA" />
+        <SeriesTitle title="PORTRAIT" address="/portrait" />
       </SeriesSection>
       <SeriesSection>
-        <SeriesTitle title="OLD PEOPLE" backgroundColor="#212520" />
+        <SeriesTitle title="DIARY" backgroundColor="#212520" address="/diary" />
         <SeriesImage src={props.images.data.imageTwo.childImageSharp.fluid} />
       </SeriesSection>
       <SeriesSection>
         <SeriesImage src={props.images.data.imageFour.childImageSharp.fluid} />
-        <SeriesTitle title="DIARY" backgroundColor="#395974" />
+        <SeriesTitle
+          title="PLACES"
+          backgroundColor="#395974"
+          address="/places"
+        />
       </SeriesSection>
       <SeriesSection>
         <SeriesTitle
-          title="PORTRAIT"
+          title="PERSONAL PROJECTS"
           backgroundColor="#ba6243"
-          address="/portrait"
+          address="/personal"
         />
         <SeriesImage src={props.images.data.imageFive.childImageSharp.fluid} />
       </SeriesSection>
