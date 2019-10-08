@@ -39,8 +39,8 @@ const series = props => {
       </SeriesSection>
       <SeriesSection>
         <SeriesTitle
-          title="PERSONAL PROJECTS"
-          backgroundColor="#ba6243"
+          title="PERSONAL"
+          backgroundColor="#c5a679"
           address="/personal"
         />
         <SeriesImage src={props.images.data.imageFive.childImageSharp.fluid} />

@@ -615,11 +615,6 @@ pre tt:before,
 pre tt:after {
   content: '';
 }
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
-}
 
 footer {
   text-align: center;
@@ -630,4 +625,15 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+@media (max-width: 568px) {
+  footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 100%;
+  }
 }

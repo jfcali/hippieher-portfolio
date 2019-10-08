@@ -12,9 +12,9 @@
 }
 
 .SeriesTitle:hover {
-  text-shadow: -2px -2px #4f9c92;
+  /* text-shadow: -2px -2px #4f9c92;
   transition: all ease 0.3s;
-  text-decoration: none;
+  text-decoration: none; */
 }
 
 @media (max-width: 767px) {
