@@ -16,12 +16,10 @@ const groupImages = (images, size = 6) => {
 const imageLayout = props => {
   const [showDetail, setShowDetail] = useState(false)
   const [currentImage, setCurrentImage] = useState()
-  console.log(props.images)
   const groupOfImages = groupImages(props.images)
   return (
     <div style={{ paddingBottom: '250px' }}>
       {groupOfImages.map((images, index) => {
-        console.log(images)
         return (
           <div
             className="ImageLayout"
