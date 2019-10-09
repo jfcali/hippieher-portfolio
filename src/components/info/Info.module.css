@@ -68,6 +68,20 @@
 .Contact ul li {
   margin-bottom: 0px;
 }
+.Contact a {
+  color: black;
+}
+
+.Icons {
+  margin-top: 8px;
+}
+.Icons a {
+  margin-right: 10px;
+}
+
+.Logo {
+  width: 20px;
+}
 
 @media (max-width: 767px) {
   .Info,

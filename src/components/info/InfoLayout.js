@@ -2,8 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import styles from './Info.module.css'
 
+import instagram from '../../images/icon/instagram (1).svg'
+import behance from '../../images/icon/behance (1).svg'
+import dribbble from '../../images/icon/dribbbble (1).svg'
+import flickr from '../../images/icon/flickr (1).svg'
+import tumblr from '../../images/icon/tumblr (1).svg'
+import linkedin from '../../images/icon/linkedin.svg'
+
 const infoLayout = props => {
-  console.log(props)
   const [visibility, setVisibility] = useState(false)
   const classes = [styles.Info]
   if (visibility) classes.push(styles.Visible)
@@ -36,9 +42,35 @@ const infoLayout = props => {
           <div className={styles.Contact}>
             <h2>CONTACT</h2>
             <ul>
-              <li>+34 622 42 31 49</li>
-              <li>dfernandavg@gmail.com</li>
-              <li className={styles.Icons}>Instagram Twitter Behance Cargo</li>
+              <li>
+                <a href="tel:+34622423149">+34 622 42 31 49</a>
+              </li>
+              <li>
+                <a href="mailto:dfernandavg@gmail.com">dfernandavg@gmail.com</a>
+              </li>
+              <li className={styles.Icons}>
+                <a href="https://www.instagram.com/hippieher/" target="_BLANK">
+                  <img className={styles.Logo} src={instagram} />
+                </a>{' '}
+                <a href="https://www.behance.net/fernandavelez" target="_BLANK">
+                  <img className={styles.Logo} src={behance} />
+                </a>{' '}
+                <a href="https://dribbble.com/fher" target="_BLANK">
+                  <img className={styles.Logo} src={dribbble} />
+                </a>{' '}
+                <a
+                  href="https://www.flickr.com/photos/dfernandavg/"
+                  target="_BLANK"
+                >
+                  <img className={styles.Logo} src={flickr} />
+                </a>{' '}
+                {/* <a href="https://www.behance.net/fernandavelez" target="_BLANK">
+                  <img className={styles.Logo} src={tumblr} />
+                </a>{' '}
+                <a href="https://www.behance.net/fernandavelez" target="_BLANK">
+                  <img className={styles.Logo} src={linkedin} />
+                </a>{' '} */}
+              </li>
             </ul>
           </div>
         </div>
